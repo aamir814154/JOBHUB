@@ -1,21 +1,24 @@
-apiVerison : apps/v1
-kind : Deployment
-metadata :
-  name : nginx-deployment
-  labels: 
-    app : nginx
-spec :
-  replicas : 3
-  selector :
-    matchLabels :
-      app : nginx
-    template :
-    matadata :
-      labels :
-        app : nginx
-    spec :
-      containers :
-        - name : nginx
-          image : 88653/linkdin:v1
-          port : 
-        - containerPort : 80
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobhub-deployment
+  labels:
+    app: jobhub
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jobhub
+
+  template:
+    metadata:
+      labels:
+        app: jobhub
+
+    spec:
+      containers:
+      - name: jobhub-container
+        image: 88653/linkdin:v1
+        ports:
+        - containerPort: 80
