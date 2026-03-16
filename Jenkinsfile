@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Code'){
             steps{
-                 git"https://github.com/aamir814154/JOBHUB.git"
+                git branch: 'main', url: 'https://github.com/aamir814154/JOBHUB.git'
             }
         }
 
@@ -26,10 +26,10 @@ pipeline {
                     credentialsId:'dockerhub-creds',
                     usernameVariable: "USER",
                     passwordVariable: 'PASS'
-                )])
-                sh 'echo $PASS | docker login -u $USER --password -stdin'
-                sh 'docker push $DOCKER_IMAGE:$DOCKER_VERSION'
-                
+                )]) {
+                    sh 'echo $PASS | docker login -u $USER --password -stdin'
+                    sh 'docker push ${DOCKER_IMAGE}:${DOCKER_VERSION}'
+                }
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
         }
     }
 
-    posts {
+    post {
         success {
             echo "Deployment is successful"
         }
@@ -52,4 +52,5 @@ pipeline {
 
     
 
+}
 }
