@@ -1,0 +1,21 @@
+apiVerison : v1
+kind : Deployment
+metadata :
+  name : nginx-deployment
+  labels: 
+    app : nginx
+spec :
+  replicas : 3
+  selector :
+    matchLabels :
+      app : nginx
+    template :
+    matadata :
+      labels :
+        app : nginx
+    spec :
+      containers :
+        - name : nginx
+          image : 88653/linkdin:v1
+          port : 
+        - containerPort : 80

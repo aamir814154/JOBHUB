@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevateJobs | Find Your Dream Career</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="ri-briefcase-4-fill"></i></div>
+                Elevate<span>Jobs</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active">Find Jobs</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="icon-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <a href="#" class="btn btn-text">Log In</a>
+                <a href="#" class="btn btn-primary">Post a Job</a>
+            </div>
+
+            <button class="mobile-menu-btn icon-toggle" aria-label="Menu">
+                <i class="ri-menu-3-line"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge badge-glow">Over 10,000+ Active Jobs</span>
+                    <h1 class="hero-title">Find the job that fits your <span class="text-gradient">lifestyle</span>.</h1>
+                    <p class="hero-subtitle">Discover opportunities that match your skills, culture, and goals. Your next big career move starts here.</p>
+                    
+                    <div class="search-bar glass-panel">
+                        <div class="search-input-group">
+                            <i class="ri-search-line"></i>
+                            <input type="text" placeholder="Job title, keywords, or company">
+                        </div>
+                        <div class="search-divider"></div>
+                        <div class="search-input-group">
+                            <i class="ri-map-pin-line"></i>
+                            <input type="text" placeholder="City or remote">
+                        </div>
+                        <button class="btn btn-primary btn-large">Search Jobs</button>
+                    </div>
+                    
+                    <div class="popular-searches">
+                        <span>Popular:</span>
+                        <a href="#" class="tag">UI/UX Designer</a>
+                        <a href="#" class="tag">Frontend Developer</a>
+                        <a href="#" class="tag">Product Manager</a>
+                        <a href="#" class="tag">Remote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Categories Section -->
+        <section class="categories section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore by <span class="text-gradient">Category</span></h2>
+                    <a href="#" class="btn btn-text">View All Categories <i class="ri-arrow-right-line"></i></a>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="#" class="category-card">
+                        <div class="category-icon"><i class="ri-pen-nib-line"></i></div>
+                        <h3>Design & Creative</h3>
+                        <p>1,240 Jobs</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon"><i class="ri-code-box-line"></i></div>
+                        <h3>Development</h3>
+                        <p>3,500 Jobs</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon"><i class="ri-megaphone-line"></i></div>
+                        <h3>Marketing</h3>
+                        <p>850 Jobs</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon"><i class="ri-briefcase-line"></i></div>
+                        <h3>Business</h3>
+                        <p>420 Jobs</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Jobs Section -->
+        <section class="jobs section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured <span class="text-gradient">Jobs</span></h2>
+                    
+                    <div class="job-filters">
+                        <button class="filter-btn active" data-filter="all">All Jobs</button>
+                        <button class="filter-btn" data-filter="design">Design</button>
+                        <button class="filter-btn" data-filter="development">Development</button>
+                        <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    </div>
+                </div>
+
+                <div class="jobs-grid" id="jobs-container">
+                    <!-- Job cards will be injected here by script.js -->
+                </div>
+                
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary btn-large">Load More Jobs</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="ri-briefcase-4-fill"></i></div>
+                        Elevate<span>Jobs</span>
+                    </a>
+                    <p class="brand-desc">Building the future of recruitment with AI-driven matching and premium candidate experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-wrapper">
+                    <div class="link-group">
+                        <h4>Candidates</h4>
+                        <ul>
+                            <li><a href="#">Find Jobs</a></li>
+                            <li><a href="#">Career Advice</a></li>
+                            <li><a href="#">Resume Builder</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Employers</h4>
+                        <ul>
+                            <li><a href="#">Post a Job</a></li>
+                            <li><a href="#">Search Resumes</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Get the latest jobs straight to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Email address">
+                            <button type="submit" class="btn btn-primary"><i class="ri-send-plane-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ElevateJobs. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-content glass-panel">
+            <button class="modal-close" id="close-login"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <p>Log in to access your saved jobs and applications.</p>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-actions">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Log In</button>
+            </form>
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Job Modal -->
+    <div class="modal-overlay" id="post-job-modal">
+        <div class="modal-content glass-panel modal-lg">
+            <button class="modal-close" id="close-post-job"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h2>Post a <span class="text-gradient">Job</span></h2>
+                <p>Reach thousands of top-tier candidates.</p>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" placeholder="e.g. Senior Visual Designer" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select required>
+                            <option value="">Select a category</option>
+                            <option value="design">Design</option>
+                            <option value="development">Development</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="e.g. Remote, San Francisco" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Job Type</label>
+                        <select required>
+                            <option value="full-time">Full Time</option>
+                            <option value="part-time">Part Time</option>
+                            <option value="contract">Contract</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="Your Company Ltd." required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Create Job Post</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    </script><script src="script.js"></script>
+</body>
+</html>
